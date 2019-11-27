@@ -1,16 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Gatsby Crash Course`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/pages`,
+        // path which blog post are added
+        name: `pages`,
       },
     },
     `gatsby-transformer-sharp`,
